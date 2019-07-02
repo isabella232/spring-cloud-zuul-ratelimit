@@ -1,0 +1,23 @@
+description = 'Rate limit configuration for Spring Cloud Netflix Zuul - Core'
+
+dependencies {
+    compile group: 'org.springframework.boot', name: 'spring-boot-autoconfigure-processor', version:'1.5.19.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-configuration-processor', version:'1.5.19.RELEASE'
+    testCompile group: 'org.springframework.security', name: 'spring-security-test', version:'4.2.11.RELEASE'
+    compileOnly group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-zuul', version:'1.4.6.RELEASE'
+    compileOnly group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis', version:'1.5.19.RELEASE'
+    compileOnly group: 'org.springframework.cloud', name: 'spring-cloud-starter-consul', version:'1.3.5.RELEASE'
+    compileOnly group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version:'1.5.19.RELEASE'
+    compileOnly group: 'org.springframework.boot', name: 'spring-boot-starter-security', version:'1.5.19.RELEASE'
+    compileOnly group: 'com.github.vladimir-bukhtoyarov', name: 'bucket4j-core', version:'4.3.0'
+    compileOnly group: 'com.github.vladimir-bukhtoyarov', name: 'bucket4j-jcache', version:'4.3.0'
+    compileOnly group: 'com.github.vladimir-bukhtoyarov', name: 'bucket4j-hazelcast', version:'4.3.0'
+    compileOnly group: 'com.github.vladimir-bukhtoyarov', name: 'bucket4j-ignite', version:'4.3.0'
+    compileOnly group: 'com.github.vladimir-bukhtoyarov', name: 'bucket4j-infinispan', version:'4.3.0'
+    compileOnly group: 'javax.cache', name: 'cache-api', version:'1.1.0'
+    compileOnly group: 'com.hazelcast', name: 'hazelcast', version:'3.11'
+    compileOnly group: 'org.apache.ignite', name: 'ignite-core', version:'2.7.0'
+    compileOnly group: 'org.infinispan', name: 'infinispan-core', version:'9.4.5.Final'
+    compileOnly group: 'org.infinispan', name: 'infinispan-commons', version:'9.4.5.Final'
+    compileOnly group: 'org.projectlombok', name: 'lombok', version:'1.16.22'
+}

@@ -1,0 +1,13 @@
+description = 'Tests - Bucket4j Infinispan RateLimit'
+
+dependencies {
+  compile project(':spring-cloud-zuul-ratelimit')
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-zuul', version:'1.4.6.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version:'1.5.19.RELEASE'
+    compile group: 'com.github.vladimir-bukhtoyarov', name: 'bucket4j-core', version:'4.3.0'
+    compile group: 'com.github.vladimir-bukhtoyarov', name: 'bucket4j-jcache', version:'4.3.0'
+    compile group: 'com.github.vladimir-bukhtoyarov', name: 'bucket4j-infinispan', version:'4.3.0'
+    compile group: 'javax.cache', name: 'cache-api', version:'1.1.0'
+    compile group: 'org.infinispan', name: 'infinispan-core', version:'9.4.5.Final'
+    compile group: 'org.infinispan', name: 'infinispan-commons', version:'9.4.5.Final'
+}

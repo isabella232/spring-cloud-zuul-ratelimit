@@ -1,0 +1,26 @@
+allprojects  {
+  apply plugin: 'maven'
+
+  group = 'com.marcosbarbero.cloud'
+  version = '1.7.3.RELEASE'
+}
+
+subprojects {
+  apply plugin: 'java'
+  sourceCompatibility = 1.8
+  targetCompatibility = 1.8
+
+  
+  repositories {
+    mavenLocal()
+    maven { url "http://repo.maven.apache.org/maven2" }
+  }
+
+  dependencies {
+    testCompile group: 'junit', name: 'junit', version:'4.12'
+    testCompile(group: 'org.springframework.boot', name: 'spring-boot-starter-test', version:'1.5.19.RELEASE') {
+      exclude(module: 'commons-logging')
+    }
+    testCompile group: 'org.mockito', name: 'mockito-all', version:'1.10.19'
+  }
+}

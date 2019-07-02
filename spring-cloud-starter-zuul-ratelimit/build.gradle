@@ -1,0 +1,5 @@
+description = 'Spring Cloud Starter Zuul - Rate Limit'
+
+dependencies {
+  compile project(':spring-cloud-zuul-ratelimit-core')
+}

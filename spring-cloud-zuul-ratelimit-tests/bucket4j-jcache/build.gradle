@@ -1,0 +1,12 @@
+description = 'Tests - Bucket4j JCache RateLimit'
+
+dependencies {
+  compile project(':spring-cloud-zuul-ratelimit')
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-zuul', version:'1.4.6.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version:'1.5.19.RELEASE'
+    compile group: 'com.github.vladimir-bukhtoyarov', name: 'bucket4j-core', version:'4.3.0'
+    compile group: 'com.github.vladimir-bukhtoyarov', name: 'bucket4j-jcache', version:'4.3.0'
+    compile group: 'com.github.vladimir-bukhtoyarov', name: 'bucket4j-ignite', version:'4.3.0'
+    compile group: 'javax.cache', name: 'cache-api', version:'1.1.0'
+    compile group: 'org.apache.ignite', name: 'ignite-core', version:'[2.7,)'
+}
