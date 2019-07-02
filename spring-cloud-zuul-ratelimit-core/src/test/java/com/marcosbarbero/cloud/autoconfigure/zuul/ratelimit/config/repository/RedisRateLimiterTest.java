@@ -1,12 +1,13 @@
 package com.marcosbarbero.cloud.autoconfigure.zuul.ratelimit.config.repository;
 
-import static org.mockito.Matchers.any;
-import static org.mockito.Matchers.anyLong;
-import static org.mockito.Matchers.anyString;
-import static org.mockito.Matchers.matches;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyLong;
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.ArgumentMatchers.matches;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -93,7 +94,7 @@ public class RedisRateLimiterTest extends BaseRateLimiterTest {
     @Test
     public void testConsumeExpireException() {
         ValueOperations ops = mock(ValueOperations.class);
-        when(ops.increment(anyString(), anyLong())).thenReturn(1L);
+        when(ops.increment(anyString(), anyLong())).thenReturn(0L);
         doReturn(ops).when(redisTemplate).opsForValue();
         when(redisTemplate.getExpire("key")).thenReturn(null);
         doThrow(new RuntimeException()).when(redisTemplate).expire(matches("key"), anyLong(), any());
