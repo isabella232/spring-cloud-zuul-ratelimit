@@ -1,4 +1,4 @@
-= Spring Cloud Zuul RateLimit image:https://travis-ci.org/marcosbarbero/spring-cloud-zuul-ratelimit.svg?branch=master["Build Status", link="https://travis-ci.org/marcosbarbero/spring-cloud-zuul-ratelimit"] image:https://coveralls.io/repos/github/marcosbarbero/spring-cloud-zuul-ratelimit/badge.svg?branch=master["Coverage Status", link="https://coveralls.io/github/marcosbarbero/spring-cloud-zuul-ratelimit?branch=master"] image:https://maven-badges.herokuapp.com/maven-central/com.marcosbarbero.cloud/spring-cloud-zuul-ratelimit/badge.svg["Maven Central", link="https://maven-badges.herokuapp.com/maven-central/com.marcosbarbero.cloud/spring-cloud-zuul-ratelimit"]
+= Spring Cloud Zuul RateLimit image:https://travis-ci.org/SWCE/spring-cloud-zuul-ratelimit.svg?branch=master["Build Status", link="https://travis-ci.org/SWCE/spring-cloud-zuul-ratelimit"] image:https://coveralls.io/repos/github/SWCE/spring-cloud-zuul-ratelimit/badge.svg?branch=master["Coverage Status", link="https://coveralls.io/github/SWCE/spring-cloud-zuul-ratelimit?branch=master"] image:https://maven-badges.herokuapp.com/maven-central/SWCE/spring-cloud-zuul-ratelimit/badge.svg["Maven Central", link="https://maven-badges.herokuapp.com/maven-central/SWCE/spring-cloud-zuul-ratelimit"]
 :toc:
 
 :imagesdir: ./assets/images
@@ -32,7 +32,7 @@ multiple values to the list
 
 [NOTE]
 ====
-Latest version: image:https://maven-badges.herokuapp.com/maven-central/com.marcosbarbero.cloud/spring-cloud-zuul-ratelimit/badge.svg["Maven Central", link="https://maven-badges.herokuapp.com/maven-central/com.marcosbarbero.cloud/spring-cloud-zuul-ratelimit"]
+Latest version: image:https://maven-badges.herokuapp.com/maven-central/SWCE/spring-cloud-zuul-ratelimit/badge.svg["Maven Central", link="https://maven-badges.herokuapp.com/maven-central/SWCE/spring-cloud-zuul-ratelimit"]
 ====
 
 [NOTE]
@@ -319,13 +319,11 @@ missing methods and fields.
 
 === Code of Conduct
 This project adheres to the Contributor Covenant 
-https://github.com/marcosbarbero/spring-cloud-starter-zuul-ratelimit/blob/master/docs/code-of-conduct.adoc[code of conduct].
-By participating, you are expected to uphold this code. Please report unacceptable behavior to marcos.hgb@gmail.com.
+https://github.com/SWCE/spring-cloud-starter-zuul-ratelimit/blob/master/docs/code-of-conduct.adoc[code of conduct].
+By participating, you are expected to uphold this code. Please report unacceptable behavior to lchayoun@gmail.com.
 
 === Acknowledgement
 
-image::jetbrains_logo.png[Jetbrains, 150, link="https://www.jetbrains.com/"]
-
 == Footnote
-Any doubt open an https://github.com/marcosbarbero/spring-cloud-starter-zuul-ratelimit/issues[issue].
-Any fix send me a https://github.com/marcosbarbero/spring-cloud-starter-zuul-ratelimit/pulls[Pull Request].
+Any doubt open an https://github.com/SWCE/spring-cloud-starter-zuul-ratelimit/issues[issue].
+Any fix send me a https://github.com/SWCE/spring-cloud-starter-zuul-ratelimit/pulls[Pull Request].
