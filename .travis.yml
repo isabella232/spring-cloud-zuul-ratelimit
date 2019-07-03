@@ -7,7 +7,7 @@ jdk:
 
 addons:
   sonarcloud:
-    organization: "SWCE_spring-cloud-zuul-ratelimit"
+    organization: swce
 
 script:
   - sonar-scanner
