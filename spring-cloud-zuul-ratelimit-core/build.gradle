@@ -1,42 +1,42 @@
-description = 'Rate limit configuration for Spring Cloud Netflix Zuul - Core'
+description = "Rate limit configuration for Spring Cloud Netflix Zuul - Core"
 
 dependencies {
-    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-zuul'
+    compile group: "org.springframework.cloud", name: "spring-cloud-starter-zuul"
 
-    compileOnly group: 'org.springframework.boot', name: 'spring-boot-autoconfigure-processor'
-    compileOnly group: 'org.springframework.boot', name: 'spring-boot-configuration-processor'
-    compileOnly group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis'
-    compileOnly group: 'org.springframework.cloud', name: 'spring-cloud-starter-consul'
-    compileOnly group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa'
-    compileOnly group: 'org.springframework.boot', name: 'spring-boot-starter-security'
+    compileOnly group: "org.springframework.boot", name: "spring-boot-autoconfigure-processor"
+    compileOnly group: "org.springframework.boot", name: "spring-boot-configuration-processor"
+    compileOnly group: "org.springframework.boot", name: "spring-boot-starter-data-redis"
+    compileOnly group: "org.springframework.cloud", name: "spring-cloud-starter-consul"
+    compileOnly group: "org.springframework.boot", name: "spring-boot-starter-data-jpa"
+    compileOnly group: "org.springframework.boot", name: "spring-boot-starter-security"
 
-    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis'
-    testCompile group: 'org.springframework.cloud', name: 'spring-cloud-starter-consul'
-    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa'
-    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-security'
-    testCompile group: 'org.springframework.security', name: 'spring-security-test'
+    testCompile group: "org.springframework.boot", name: "spring-boot-starter-data-redis"
+    testCompile group: "org.springframework.cloud", name: "spring-cloud-starter-consul"
+    testCompile group: "org.springframework.boot", name: "spring-boot-starter-data-jpa"
+    testCompile group: "org.springframework.boot", name: "spring-boot-starter-security"
+    testCompile group: "org.springframework.security", name: "spring-security-test"
 
-    compileOnly group: 'com.github.vladimir-bukhtoyarov', name: 'bucket4j-core', version: '${bucket4j_version}'
-    compileOnly group: 'com.github.vladimir-bukhtoyarov', name: 'bucket4j-jcache', version: '${bucket4j_version}'
-    compileOnly group: 'com.github.vladimir-bukhtoyarov', name: 'bucket4j-hazelcast', version: '${bucket4j_version}'
-    compileOnly group: 'com.github.vladimir-bukhtoyarov', name: 'bucket4j-ignite', version: '${bucket4j_version}'
-    compileOnly group: 'com.github.vladimir-bukhtoyarov', name: 'bucket4j-infinispan', version: '${bucket4j_version}'
+    compileOnly group: "com.github.vladimir-bukhtoyarov", name: "bucket4j-core", version: "${bucket4j_version}"
+    compileOnly group: "com.github.vladimir-bukhtoyarov", name: "bucket4j-jcache", version: "${bucket4j_version}"
+    compileOnly group: "com.github.vladimir-bukhtoyarov", name: "bucket4j-hazelcast", version: "${bucket4j_version}"
+    compileOnly group: "com.github.vladimir-bukhtoyarov", name: "bucket4j-ignite", version: "${bucket4j_version}"
+    compileOnly group: "com.github.vladimir-bukhtoyarov", name: "bucket4j-infinispan", version: "${bucket4j_version}"
 
-    testCompile group: 'com.github.vladimir-bukhtoyarov', name: 'bucket4j-core', version: '${bucket4j_version}'
-    testCompile group: 'com.github.vladimir-bukhtoyarov', name: 'bucket4j-jcache', version: '${bucket4j_version}'
-    testCompile group: 'com.github.vladimir-bukhtoyarov', name: 'bucket4j-hazelcast', version: '${bucket4j_version}'
-    testCompile group: 'com.github.vladimir-bukhtoyarov', name: 'bucket4j-ignite', version: '${bucket4j_version}'
-    testCompile group: 'com.github.vladimir-bukhtoyarov', name: 'bucket4j-infinispan', version: '${bucket4j_version}'
+    testCompile group: "com.github.vladimir-bukhtoyarov", name: "bucket4j-core", version: "${bucket4j_version}"
+    testCompile group: "com.github.vladimir-bukhtoyarov", name: "bucket4j-jcache", version: "${bucket4j_version}"
+    testCompile group: "com.github.vladimir-bukhtoyarov", name: "bucket4j-hazelcast", version: "${bucket4j_version}"
+    testCompile group: "com.github.vladimir-bukhtoyarov", name: "bucket4j-ignite", version: "${bucket4j_version}"
+    testCompile group: "com.github.vladimir-bukhtoyarov", name: "bucket4j-infinispan", version: "${bucket4j_version}"
 
-    compileOnly group: 'javax.cache', name: 'cache-api', version: '${javax_cache_version}'
-    compileOnly group: 'com.hazelcast', name: 'hazelcast', version: '${hazelcast_version}'
-    compileOnly group: 'org.apache.ignite', name: 'ignite-core', version: '${ignite_version}'
-    compileOnly group: 'org.infinispan', name: 'infinispan-core', version: '${infinispan_version}'
-    compileOnly group: 'org.infinispan', name: 'infinispan-commons', version: '${infinispan_version}'
+    compileOnly group: "javax.cache", name: "cache-api", version: "${javax_cache_version}"
+    compileOnly group: "com.hazelcast", name: "hazelcast", version: "${hazelcast_version}"
+    compileOnly group: "org.apache.ignite", name: "ignite-core", version: "${ignite_version}"
+    compileOnly group: "org.infinispan", name: "infinispan-core", version: "${infinispan_version}"
+    compileOnly group: "org.infinispan", name: "infinispan-commons", version: "${infinispan_version}"
 
-    testCompile group: 'javax.cache', name: 'cache-api', version: '${javax_cache_version}'
-    testCompile group: 'com.hazelcast', name: 'hazelcast', version: '${hazelcast_version}'
-    testCompile group: 'org.apache.ignite', name: 'ignite-core', version: '${ignite_version}'
-    testCompile group: 'org.infinispan', name: 'infinispan-core', version: '${infinispan_version}'
-    testCompile group: 'org.infinispan', name: 'infinispan-commons', version: '${infinispan_version}'
+    testCompile group: "javax.cache", name: "cache-api", version: "${javax_cache_version}"
+    testCompile group: "com.hazelcast", name: "hazelcast", version: "${hazelcast_version}"
+    testCompile group: "org.apache.ignite", name: "ignite-core", version: "${ignite_version}"
+    testCompile group: "org.infinispan", name: "infinispan-core", version: "${infinispan_version}"
+    testCompile group: "org.infinispan", name: "infinispan-commons", version: "${infinispan_version}"
 }
