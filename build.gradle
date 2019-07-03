@@ -1,6 +1,7 @@
 buildscript {
     ext {
         depManagementVersion = "1.0.6.RELEASE"
+        sonarqubeVersion = "2.7.1"
     }
 
     repositories {
@@ -8,10 +9,14 @@ buildscript {
         mavenCentral()
         maven { url "https://plugins.gradle.org/m2/" }
     }
+
     dependencies {
         classpath "io.spring.gradle:dependency-management-plugin:${depManagementVersion}"
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:${sonarqubeVersion}"
     }
 }
+
+apply plugin: "org.sonarqube"
 
 allprojects {
     group = "com.swce.cloud"
