@@ -1,8 +1,0 @@
-description = 'Tests - Consul RateLimit'
-
-dependencies {
-    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-consul', version: '1.3.5.RELEASE'
-    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-zuul', version: '1.4.6.RELEASE'
-    compile project(':spring-cloud-zuul-ratelimit')
-    compile group: 'com.pszymczyk.consul', name: 'embedded-consul', version: '0.3.4'
-}
