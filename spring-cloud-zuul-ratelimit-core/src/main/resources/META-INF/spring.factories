@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.swce.cloud.autoconfigure.zuul.ratelimit.RateLimitAutoConfiguration
+com.github.swce.cloud.autoconfigure.zuul.ratelimit.RateLimitAutoConfiguration

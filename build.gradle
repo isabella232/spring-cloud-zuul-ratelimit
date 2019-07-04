@@ -19,8 +19,8 @@ buildscript {
 apply plugin: "org.sonarqube"
 
 allprojects {
-    group = "com.swce.cloud"
-    version = "1.5.0.RELEASE"
+    group = "com.github.swce"
+    version = "1.5.0"
 }
 
 subprojects {

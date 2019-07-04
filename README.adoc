@@ -39,7 +39,7 @@ Latest version: image:https://maven-badges.herokuapp.com/maven-central/SWCE/spri
 ====
 If you are using Spring Boot version `1.5.x` you *MUST* use Spring Cloud Zuul RateLimit version `1.7.x`.
 Please take a look at the 
-link:https://mvnrepository.com/artifact/com.swce.cloud/spring-cloud-zuul-ratelimit[Maven Central] and pick the
+link:https://mvnrepository.com/artifact/com.github.swce/spring-cloud-zuul-ratelimit[Maven Central] and pick the
 latest artifact in this version line.
 ====
 
@@ -48,7 +48,7 @@ Add the dependency on pom.xml
 [source, xml]
 ----
 <dependency>
-    <groupId>com.swce.cloud</groupId>
+    <groupId>com.github.swce</groupId>
     <artifactId>spring-cloud-zuul-ratelimit</artifactId>
     <version>LATEST</version>
 </dependency>
