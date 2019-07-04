@@ -1,7 +1,7 @@
 description = "Tests - Bucket4j Ignite RateLimit"
 
 dependencies {
-    compile project(":spring-cloud-zuul-ratelimit")
+    compile project(":spring-cloud-starter-zuul-ratelimit")
     
     compile group: "org.springframework.cloud", name: "spring-cloud-starter-netflix-zuul"
     compile group: "org.springframework.boot", name: "spring-boot-starter-web"
