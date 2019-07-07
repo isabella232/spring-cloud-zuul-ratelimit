@@ -2,6 +2,9 @@ language: java
 
 sudo: false
 
+git:
+  depth: false
+
 jdk:
   - openjdk8
 
@@ -15,6 +18,8 @@ script:
 install:
   - ./gradlew clean build
 
+after_success:
+  - ./gradlew bintrayUpload
 cache:
   directories:
     - $HOME/.m2/repository
