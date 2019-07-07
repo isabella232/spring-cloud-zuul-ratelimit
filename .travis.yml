@@ -16,7 +16,7 @@ script:
   - sonar-scanner
 
 install:
-  - ./gradlew clean build
+  - ./gradlew clean build jacocoTestReport coveralls
 
 after_success:
   - ./gradlew bintrayUpload

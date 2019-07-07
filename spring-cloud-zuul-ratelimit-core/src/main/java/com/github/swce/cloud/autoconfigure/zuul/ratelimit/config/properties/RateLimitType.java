@@ -88,7 +88,7 @@ public enum RateLimitType {
      */
     HTTPMETHOD {
         @Override
-        public boolean apply(HttpServletRequest request, Route route, RateLimitUtils rateLimitUtils,/*not null*/ String matcher) {
+        public boolean apply(HttpServletRequest request, Route route, RateLimitUtils rateLimitUtils, String matcher) {
             return request.getMethod().equalsIgnoreCase(matcher);
         }
 
