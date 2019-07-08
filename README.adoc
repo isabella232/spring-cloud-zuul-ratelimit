@@ -1,4 +1,7 @@
-= Spring Cloud Zuul RateLimit image:https://travis-ci.org/SWCE/spring-cloud-zuul-ratelimit.svg?branch=master["Build Status", link="https://travis-ci.org/SWCE/spring-cloud-zuul-ratelimit"] image:https://sonarcloud.io/api/project_badges/measure?project=SWCE_spring-cloud-zuul-ratelimit&metric=alert_status["Quality Gate", link="https://sonarcloud.io/dashboard?id=SWCE_spring-cloud-zuul-ratelimit"] image:https://coveralls.io/repos/github/SWCE/spring-cloud-zuul-ratelimit/badge.svg?branch=master["Coverage Status", link="https://coveralls.io/github/SWCE/spring-cloud-zuul-ratelimit?branch=master"] image:https://api.bintray.com/packages/swce/spring-cloud-zuul-ratelimit/spring-cloud-zuul-ratelimit/images/download.svg[link="https://bintray.com/swce/spring-cloud-zuul-ratelimit/spring-cloud-zuul-ratelimit"]
+= Spring Cloud Zuul RateLimit
+
+image:https://travis-ci.org/SWCE/spring-cloud-zuul-ratelimit.svg?branch=master["Build Status", link="https://travis-ci.org/SWCE/spring-cloud-zuul-ratelimit"] image:https://sonarcloud.io/api/project_badges/measure?project=SWCE_spring-cloud-zuul-ratelimit&metric=alert_status["Quality Gate", link="https://sonarcloud.io/dashboard?id=SWCE_spring-cloud-zuul-ratelimit"] image:https://coveralls.io/repos/github/SWCE/spring-cloud-zuul-ratelimit/badge.svg?branch=master["Coverage Status", link="https://coveralls.io/github/SWCE/spring-cloud-zuul-ratelimit?branch=master"] image:https://api.bintray.com/packages/swce/spring-cloud-zuul-ratelimit/spring-cloud-zuul-ratelimit/images/download.svg[link="https://bintray.com/swce/spring-cloud-zuul-ratelimit/spring-cloud-zuul-ratelimit"]
+
 :toc:
 
 :imagesdir: ./assets/images
@@ -30,27 +33,13 @@ multiple values to the list
 
 == Usage
 
-[NOTE]
-====
-Latest version: image:https://maven-badges.herokuapp.com/maven-central/SWCE/spring-cloud-zuul-ratelimit/badge.svg["Maven Central", link="https://maven-badges.herokuapp.com/maven-central/SWCE/spring-cloud-zuul-ratelimit"]
-====
-
-[NOTE]
-====
-If you are using Spring Boot version `1.5.x` you *MUST* use Spring Cloud Zuul RateLimit version `1.7.x`.
-Please take a look at the 
-link:https://mvnrepository.com/artifact/com.github.swce/spring-cloud-zuul-ratelimit[Maven Central] and pick the
-latest artifact in this version line.
-====
-
-Add the dependency on pom.xml
+Add the dependency on pom.xml (jcenter)
 
 [source, xml]
 ----
 <dependency>
     <groupId>com.github.swce</groupId>
     <artifactId>spring-cloud-zuul-ratelimit</artifactId>
-    <version>LATEST</version>
 </dependency>
 ----
 
@@ -228,8 +217,8 @@ Property namespace: __zuul.ratelimit__
 |add-response-headers|true/false                   |true
 |key-prefix          |String                       |${spring.application.name:rate-limit-application}
 |repository          |CONSUL, REDIS, JPA, BUCKET4J_JCACHE, BUCKET4J_HAZELCAST, BUCKET4J_INFINISPAN, BUCKET4J_IGNITE| -
-|default-policy-list |List of link:./spring-cloud-zuul-ratelimit-core/src/main/java/com/marcosbarbero/cloud/autoconfigure/zuul/ratelimit/config/properties/RateLimitProperties.java#L82[Policy]| -
-|policy-list         |Map of Lists of link:./spring-cloud-zuul-ratelimit-core/src/main/java/com/marcosbarbero/cloud/autoconfigure/zuul/ratelimit/config/properties/RateLimitProperties.java#L82[Policy]| -
+|default-policy-list |List of link:./spring-cloud-zuul-ratelimit-core/src/main/java/com/github/swce/autoconfigure/zuul/ratelimit/config/properties/RateLimitProperties.java#L82[Policy]| -
+|policy-list         |Map of Lists of link:./spring-cloud-zuul-ratelimit-core/src/main/java/com/github/swce/autoconfigure/zuul/ratelimit/config/properties/RateLimitProperties.java#L82[Policy]| -
 |postFilterOrder     |int                          |FilterConstants.SEND_RESPONSE_FILTER_ORDER - 10
 |preFilterOrder      |int                          |FilterConstants.FORM_BODY_WRAPPER_FILTER_ORDER
 
@@ -255,7 +244,7 @@ This section details how to add custom implementations
 === Key Generator
 
 If the application needs to control the key strategy beyond the options offered by the type property then it can 
-be done just by creating a custom link:./spring-cloud-zuul-ratelimit-core/src/main/java/com/marcosbarbero/cloud/autoconfigure/zuul/ratelimit/config/RateLimitKeyGenerator.java[`RateLimitKeyGenerator`]
+be done just by creating a custom link:./spring-cloud-zuul-ratelimit-core/src/main/java/com/github/swce/autoconfigure/zuul/ratelimit/config/RateLimitKeyGenerator.java[`RateLimitKeyGenerator`]
 implementation adding further qualifiers or something entirely different:
 
 [source, java]
@@ -274,11 +263,11 @@ implementation adding further qualifiers or something entirely different:
 === Error Handling
 This framework uses some 3rd party applications to store and control the rate limit access, as it does not has control
 over those applications and they can fail once a while the framework itself handles the failure in the class 
-link:./spring-cloud-zuul-ratelimit-core/src/main/java/com/marcosbarbero/cloud/autoconfigure/zuul/ratelimit/config/repository/DefaultRateLimiterErrorHandler.java[`DefaultRateLimiterErrorHandler`]
+link:./spring-cloud-zuul-ratelimit-core/src/main/java/com/github/swce/autoconfigure/zuul/ratelimit/config/repository/DefaultRateLimiterErrorHandler.java[`DefaultRateLimiterErrorHandler`]
 just by adding some error logs.
 
 If there is a need to handle the errors differently, it can be achieved just by defining a custom
-link:./spring-cloud-zuul-ratelimit-core/src/main/java/com/marcosbarbero/cloud/autoconfigure/zuul/ratelimit/config/repository/RateLimiterErrorHandler.java[`RateLimiterErrorHandler`]
+link:./spring-cloud-zuul-ratelimit-core/src/main/java/com/github/swce/autoconfigure/zuul/ratelimit/config/repository/RateLimiterErrorHandler.java[`RateLimiterErrorHandler`]
 bean, e.g:
 
 [source, java]
