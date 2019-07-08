@@ -7,7 +7,7 @@ something, or simply want to hack on the code this document should help you get 
 == Code of Conduct
 This project adheres to the Contributor Covenant link:docs/code-of-conduct.adoc[code of
 conduct]. By participating, you are expected to uphold this code. Please report
-unacceptable behavior to marcos.hgb@gmail.com.
+unacceptable behavior to lchayoun@gmail.com.
 
 
 == Using GitHub issues
@@ -59,7 +59,7 @@ The project can be built from the root directory using the standard maven comman
 
 [indent=0]
 ----
-	$ mvn clean install
+	$ ./gradlew clean build
 ----
 
 If you are rebuilding often, you might also want to skip the tests and the execution of
@@ -67,7 +67,7 @@ checkstyle until you are ready to submit a pull request:
 
 [indent=0]
 ----
-	$ mvn clean install -DskipTests -Pfast
+	$ ./gradlew clean build -xtest
 ----
 
 
