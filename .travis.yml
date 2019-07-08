@@ -19,7 +19,8 @@ install:
   - ./gradlew clean build jacocoTestReport coveralls
 
 after_success:
-  - ./gradlew bintrayUpload
+  - test $TRAVIS_BRANCH = "master" && test [ "$TRAVIS_COMMIT_MESSAGE" == "*[Release]*" ] && ./gradlew bintrayUpload
+
 cache:
   directories:
     - $HOME/.m2/repository
