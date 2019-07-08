@@ -19,7 +19,7 @@ install:
   - ./gradlew clean build jacocoTestReport coveralls
 
 after_success:
-  - if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_COMMIT_MESSAGE" == "*[Release]*" ]; then ./gradlew bintrayUpload; else echo "Skipping release"; fi
+  - if [ "$TRAVIS_BRANCH" == "master" ] && [[ "$TRAVIS_COMMIT_MESSAGE" = "[Release]"* ]]; then ./gradlew bintrayUpload; else echo "Skipping release"; fi
 
 cache:
   directories:
